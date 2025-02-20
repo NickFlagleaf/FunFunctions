@@ -18,6 +18,8 @@
 #'
 
 tip<-function(x,nr=15,nc=5){
+  nr<-min(nrow(x),nr)
+  nc<-min(nrow(x),nx)
   x[1:nr,1:nc]
 }
 
