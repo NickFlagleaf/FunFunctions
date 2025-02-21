@@ -19,16 +19,16 @@
 #' library(FunFunctions)
 #' # load the A kinship matrix for 599 wheat lines from the BGLR package
 #' data(Wheat599_Amat)
-#' subset <- div.sub(K = wheat599, n.sub = 100, n.gens = 200, n.iters = 5, verbose = T)
+#' subset <- div.sub(K = wheat599, n.sub = 100, n.gens = 200, n.iters = 5, verbose = TRUE)
 div.sub <- function(K,
                     n.sub = 100,
                     n.gens = 400,
                     n.iters = 20,
-                    verbose = T) {
+                    verbose = TRUE) {
   all.id <- rownames(K)
   all.iter.sels <- list()
   all.iter.gen.maxKs <- list()
-  if (verbose == T) {
+  if (verbose == TRUE) {
     print("Iteration best max kinship:")
   }
   for (n in 1:n.iters) {
