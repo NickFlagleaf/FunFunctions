@@ -11,18 +11,14 @@
 #'
 #' @examples
 #'
-#' #Make a matrix of random numbers
-#' mat<-matrix(round(rnorm(10000),2),100,100,
-#'             dimnames = list(1:100,1:100))
-#' tip(mat) #Have a look at the tip
+#' # Make a matrix of random numbers
+#' mat <- matrix(round(rnorm(10000), 2), 100, 100,
+#'   dimnames = list(1:100, 1:100)
+#' )
+#' tip(mat) # Have a look at the tip
 #'
-
-tip<-function(x,nr=15,nc=5){
-  nr<-min(nrow(x),nr)
-  nc<-min(nrow(x),nc)
-  x[1:nr,1:nc]
+tip <- function(x, nr = 15, nc = 5) {
+  nr <- min(nrow(x), nr)
+  nc <- min(nrow(x), nc)
+  x[1:nr, 1:nc]
 }
-
-
-
-
